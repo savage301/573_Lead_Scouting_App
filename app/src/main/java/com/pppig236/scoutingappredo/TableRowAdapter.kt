@@ -16,8 +16,8 @@ class TableRowAdapter(private var userArrayList: ArrayList<User>) :
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {
-        viewHolder.tvTeam.text = userArrayList[i].matchNumber
-        viewHolder.tvMatch.text = userArrayList[i].name
+        viewHolder.tvTeam.text = userArrayList[i].name
+        viewHolder.tvMatch.text = userArrayList[i].matchNumber
         viewHolder.tvRobotBreakdown.text = userArrayList[i].breakDown
     }
 
