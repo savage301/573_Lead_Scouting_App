@@ -13,6 +13,7 @@ import android.widget.TableRow
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import android.app.AlertDialog
 
 class MainActivity : AppCompatActivity() {
     private val permissionsRequestCode = 123
@@ -68,11 +69,23 @@ class MainActivity : AppCompatActivity() {
         }
 
         buttonDelete.setOnClickListener {
-            showHide(buttonDelete)
-            csvOperations.deleteCsv(constants.file)
-            createCsv()
-            userList.clear() // make sure there are no leftovers
-            updateTable()
+            val builder = AlertDialog.Builder(this@MainActivity)
+            builder.setMessage("Are you sure you want to Delete?")
+                .setCancelable(false)
+                .setPositiveButton("Yes") { dialog, id ->
+                    // Delete selected note from database
+                    showHide(buttonDelete)
+                    csvOperations.deleteCsv(constants.file)
+                    createCsv()
+                    userList.clear() // make sure there are no leftovers
+                    updateTable()
+                }
+                .setNegativeButton("No") { dialog, id ->
+                    // Dismiss the dialog
+                    dialog.dismiss()
+                }
+            val alert = builder.create()
+            alert.show()
         }
     }
 
