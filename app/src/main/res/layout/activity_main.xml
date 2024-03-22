@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_43sdp"
             android:text="@string/scanner_fragment"
-            android:translationY="@dimen/_400sdp" />
+            android:translationY="@dimen/_40sdp" />
 
         <Button
             android:id="@+id/table_view"
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_43sdp"
             android:text="@string/table_view"
-            android:translationY="@dimen/_400sdp" />
+            android:translationY="@dimen/_40sdp" />
 
         <Button
             android:id="@+id/delete"
@@ -35,7 +35,15 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_45sdp"
             android:text="@string/delete"
-            android:translationY="@dimen/_450sdp" />
+            android:translationY="@dimen/_500sdp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/table_recycler_view"
+            android:layout_width="412dp"
+            android:layout_height="246dp"
+            android:translationY="@dimen/_45sdp">
+
+        </androidx.recyclerview.widget.RecyclerView>
     </FrameLayout>
 
     <TableRow
@@ -121,15 +129,5 @@
             android:visibility="gone" />
 
     </TableRow>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/table_recycler_view"
-        android:layout_width="394dp"
-        android:layout_height="433dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/table_heading_layout">
-
-    </androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

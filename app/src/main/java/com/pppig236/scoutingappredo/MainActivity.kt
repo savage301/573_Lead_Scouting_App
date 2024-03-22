@@ -72,13 +72,14 @@ class MainActivity : AppCompatActivity() {
             val builder = AlertDialog.Builder(this@MainActivity)
             builder.setMessage("Are you sure you want to Delete?")
                 .setCancelable(false)
-                .setPositiveButton("Yes") { dialog, id ->
-                    // Delete selected note from database
-                    showHide(buttonDelete)
-                    csvOperations.deleteCsv(constants.file)
-                    createCsv()
-                    userList.clear() // make sure there are no leftovers
-                    updateTable()
+                .setPositiveButton("No") { dialog, id ->
+//                    // Delete selected note from database
+//                    showHide(buttonDelete)
+//                    csvOperations.deleteCsv(constants.file)
+//                    createCsv()
+//                    userList.clear() // make sure there are no leftovers
+//                    updateTable()
+                    dialog.dismiss()
                 }
                 .setNegativeButton("No") { dialog, id ->
                     // Dismiss the dialog
