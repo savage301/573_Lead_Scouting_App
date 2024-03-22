@@ -28,7 +28,7 @@ class CSVOperations {
             for (column in rows) {
                 column["Match Number"]?.let { teamDataList.add(it) }
                 column["Team Number"]?.let { teamDataList.add(it) }
-                column["Robot Breakdown"]?.let { teamDataList.add(it) }
+                column["Alliance"]?.let { teamDataList.add(it) }
             }
         }
     }

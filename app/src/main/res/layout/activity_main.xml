@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_43sdp"
             android:text="@string/scanner_fragment"
-            android:translationY="@dimen/_40sdp" />
+            android:translationY="600dp" />
 
         <Button
             android:id="@+id/table_view"
@@ -35,12 +35,13 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_45sdp"
             android:text="@string/delete"
-            android:translationY="@dimen/_500sdp" />
+            android:translationY="1000dp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/table_recycler_view"
-            android:layout_width="412dp"
-            android:layout_height="246dp"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:scrollbars="vertical"
             android:translationY="@dimen/_45sdp">
 
         </androidx.recyclerview.widget.RecyclerView>
