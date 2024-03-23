@@ -12,7 +12,7 @@ class CSVOperations {
 
         // create a new file with headers
         // Update this
-        file.writeText("Match Number,Alliance,Team Number,Auto Speaker,Auto AMP,Teleop Speaker,Teleop AMP,CoOp,Hang,Harmony,Robot Breakdown,Human Pickup,Floor Pickup,Mic,Trap,Defense,Comment")
+        file.writeText("Match Number,Alliance,Team Number,Auto Speaker,Auto Amp,Auto Leave,Teleop Speaker,Teleop Amp,CoOp,Hang,Harmony,Robot Breakdown,Human Pickup,Floor Pickup,Amplify,Trap,Park,Defense,Comment")
     }
 
     fun appendCsv(fileName: String, text: String) {
